@@ -89,7 +89,7 @@ class AutoProcessVol(object):
     i_range= range(0, vol_shape[0] - (chunk_size - 1), stride)
     j_range= range(0, vol_shape[1] - (chunk_size - 1), stride)
     k_range= range(0, vol_shape[2] - (chunk_size - 1), stride)
-    progressBar= tqdm(total=len(i_range)*len(j_range))
+    progressBar= tqdm(total=len(i_range)*len(j_range), file=sys.stdout)
     for i in i_range:
       for j in j_range:
         for k in k_range:
